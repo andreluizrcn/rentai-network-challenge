@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  teleconsulta:
+    image: alpine:latest
+    container_name: teleconsulta
+    command: tail -f /dev/null
+    networks:
+      - rentai_net
+    stdin_open: true
+    tty: true
+
+  telemetria:
+    image: alpine:latest
+    container_name: telemetria
+    command: tail -f /dev/null
+    networks:
+      - rentai_net
+    stdin_open: true
+    tty: true
+
+  video_cirurgico:
+    image: alpine:latest
+    container_name: video_cirurgico
+    command: tail -f /dev/null
+    networks:
+      - rentai_net
+    stdin_open: true
+    tty: true
+
+networks:
+  rentai_net:
+    driver: bridge

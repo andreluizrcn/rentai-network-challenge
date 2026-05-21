@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   teleconsulta:
-    image: alpine:latest
+    image: ubuntu:22.04
     container_name: teleconsulta
     command: tail -f /dev/null
     networks:
@@ -11,7 +11,7 @@ services:
     tty: true
 
   telemetria:
-    image: alpine:latest
+    image: ubuntu:22.04
     container_name: telemetria
     command: tail -f /dev/null
     networks:
@@ -20,7 +20,7 @@ services:
     tty: true
 
   video_cirurgico:
-    image: alpine:latest
+    image: ubuntu:22.04
     container_name: video_cirurgico
     command: tail -f /dev/null
     networks:
@@ -31,3 +31,4 @@ services:
 networks:
   rentai_net:
     driver: bridge
+
